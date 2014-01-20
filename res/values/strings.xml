@@ -9,7 +9,7 @@
     <string name="ui_exit">Exit</string>
     <string name="copyright">SensorCity v1.0</string>
     <string name="title">SensorCity Sensors</string>
-    <string name="about">Sensor City is a Application that can be used to you know about the sensors</string>
+    <string name="about">Sensor City is an application that can be used to get information about the sensors by Johnnatan Messias, Jie Liu and Hugo Silva.</string>
     <string name="title_map">Sensors Map</string>
     <string name="title_about">About SensorCity</string>
     <string name="button_sensors">Sensors List</string>

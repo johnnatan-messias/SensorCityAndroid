@@ -35,7 +35,7 @@
             </TextView>
 
             <TextView
-                android:id="@+id/temperatura"
+                android:id="@+id/temperature"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" >
             </TextView>
@@ -57,7 +57,7 @@
             </TextView>
 
             <TextView
-                android:id="@+id/luminosidade"
+                android:id="@+id/luminosity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" >
             </TextView>
@@ -79,7 +79,7 @@
             </TextView>
 
             <TextView
-                android:id="@+id/umidade"
+                android:id="@+id/humidity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" >
             </TextView>

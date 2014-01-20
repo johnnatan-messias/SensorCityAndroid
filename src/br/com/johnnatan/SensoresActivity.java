@@ -27,7 +27,6 @@ public class SensoresActivity extends Activity implements ServiceConnection {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		// TODO Put your code here
 		setContentView(R.layout.main);
 
 		Log.i(CATEGORIA, "Service Started - bindService");
@@ -61,28 +60,22 @@ public class SensoresActivity extends Activity implements ServiceConnection {
 	protected void onDestroy() {
 		super.onDestroy();
 		unbindService(conexao);
-
 		Log.i(CATEGORIA, "onDestroy()");
 	}
 
 	@Override
 	public void onServiceConnected(ComponentName name, IBinder service) {
-		// TODO Auto-generated method stub
 		LuminiBinder binder = (LuminiBinder) service;
 		sensores = binder.getMySensores();
-
 	}
 
 	@Override
 	public void onServiceDisconnected(ComponentName name) {
-		// TODO Auto-generated method stub
 		sensores = null;
-
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// TODO Auto-generated method stub
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.ui_main_menu, menu);
 		return super.onCreateOptionsMenu(menu);
@@ -90,10 +83,7 @@ public class SensoresActivity extends Activity implements ServiceConnection {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// TODO Auto-generated method stub
-
 		switch (item.getItemId()) {
-
 		case R.id.main_menu_about:
 			startActivity(new Intent(this, AboutActivity.class));
 			break;
@@ -102,7 +92,6 @@ public class SensoresActivity extends Activity implements ServiceConnection {
 			finish();
 			break;
 		}
-
 		return super.onOptionsItemSelected(item);
 	}
 }

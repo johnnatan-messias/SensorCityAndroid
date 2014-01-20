@@ -58,24 +58,21 @@ public final class R {
     }
     public static final class id {
         public static final int city=0x7f080004;
-        public static final int country=0x7f08000c;
+        public static final int country=0x7f080009;
         public static final int humidity=0x7f080003;
-        public static final int information=0x7f08000d;
-        public static final int luminosidade=0x7f080006;
+        public static final int information=0x7f08000a;
         public static final int luminosity=0x7f080002;
-        public static final int main_menu_about=0x7f080010;
-        public static final int main_menu_exit=0x7f080011;
-        public static final int map_view=0x7f08000e;
-        public static final int neighborhood=0x7f08000a;
-        public static final int number=0x7f080009;
-        public static final int place_menu_map=0x7f080012;
-        public static final int sensor_listview=0x7f08000f;
-        public static final int state=0x7f08000b;
-        public static final int street=0x7f080008;
+        public static final int main_menu_about=0x7f08000d;
+        public static final int main_menu_exit=0x7f08000e;
+        public static final int map_view=0x7f08000b;
+        public static final int neighborhood=0x7f080007;
+        public static final int number=0x7f080006;
+        public static final int place_menu_map=0x7f08000f;
+        public static final int sensor_listview=0x7f08000c;
+        public static final int state=0x7f080008;
+        public static final int street=0x7f080005;
         public static final int tHeader=0x7f080000;
-        public static final int temperatura=0x7f080005;
         public static final int temperature=0x7f080001;
-        public static final int umidade=0x7f080007;
     }
     public static final class layout {
         public static final int include_footer=0x7f030000;

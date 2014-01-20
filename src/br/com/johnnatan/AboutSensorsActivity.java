@@ -11,8 +11,8 @@ public class AboutSensorsActivity extends Activity {
 	 */
 	private TextView titleHeader;
 	private SensoresItem sensor;
-	private TextView temperatura, luminosidade, umidade, rua, num, bairro,
-			cidade, estado, pais, info;
+	private TextView temperature, luminosity, humidity, street, num,
+			neighborhood, city, state, country, info;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -25,27 +25,26 @@ public class AboutSensorsActivity extends Activity {
 		sensor = (SensoresItem) getIntent().getSerializableExtra(
 				SensoresItem.KEY);
 
-		temperatura = (TextView) findViewById(R.id.temperatura);
-		luminosidade = (TextView) findViewById(R.id.luminosidade);
-		umidade = (TextView) findViewById(R.id.umidade);
-		rua = (TextView) findViewById(R.id.street);
+		temperature = (TextView) findViewById(R.id.temperature);
+		luminosity = (TextView) findViewById(R.id.luminosity);
+		humidity = (TextView) findViewById(R.id.humidity);
+		street = (TextView) findViewById(R.id.street);
 		num = (TextView) findViewById(R.id.number);
-		bairro = (TextView) findViewById(R.id.neighborhood);
-		cidade = (TextView) findViewById(R.id.city);
-		estado = (TextView) findViewById(R.id.state);
-		pais = (TextView) findViewById(R.id.country);
+		neighborhood = (TextView) findViewById(R.id.neighborhood);
+		city = (TextView) findViewById(R.id.city);
+		state = (TextView) findViewById(R.id.state);
+		country = (TextView) findViewById(R.id.country);
 		info = (TextView) findViewById(R.id.information);
 
-		temperatura.setText(String.valueOf(sensor.getTemperature()));
-		luminosidade.setText(String.valueOf(sensor.getLuminosity()));
-		umidade.setText(String.valueOf(sensor.getHumidity()));
-		rua.setText(sensor.getAddress().getStreet());
+		temperature.setText(String.valueOf(sensor.getTemperature()));
+		luminosity.setText(String.valueOf(sensor.getLuminosity()));
+		humidity.setText(String.valueOf(sensor.getHumidity()));
+		street.setText(sensor.getAddress().getStreet());
 		num.setText(String.valueOf(sensor.getAddress().getNumber()));
-		bairro.setText(sensor.getAddress().getState());
-		cidade.setText(sensor.getAddress().getCity());
-		estado.setText(sensor.getAddress().getNeighborhood());
-		pais.setText(sensor.getAddress().getCountry());
+		neighborhood.setText(sensor.getAddress().getState());
+		city.setText(sensor.getAddress().getCity());
+		state.setText(sensor.getAddress().getNeighborhood());
+		country.setText(sensor.getAddress().getCountry());
 		info.setText(sensor.getInformation());
-
 	}
 }
