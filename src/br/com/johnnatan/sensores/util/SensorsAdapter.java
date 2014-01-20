@@ -50,9 +50,9 @@ public class SensorsAdapter extends BaseAdapter {
 			view = layoutInflater.inflate(layout, null);
 			view.setTag(holder);
 			holder.luminosity = (TextView) view
-					.findViewById(R.id.luminosidade);
-			holder.temperature = (TextView) view.findViewById(R.id.temperatura);
-			holder.humidity = (TextView) view.findViewById(R.id.umidade);
+					.findViewById(R.id.luminosity);
+			holder.temperature = (TextView) view.findViewById(R.id.temperature);
+			holder.humidity = (TextView) view.findViewById(R.id.humidity);
 			holder.city = (TextView) view.findViewById(R.id.city);
 
 			/* Case eu inclua mais, modificar aqui */
