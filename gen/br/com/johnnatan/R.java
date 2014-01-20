@@ -11,18 +11,18 @@ public final class R {
     public static final class attr {
     }
     public static final class color {
-        public static final int amarelo=0x7f040001;
-        public static final int azul=0x7f040002;
-        public static final int branco=0x7f040003;
-        public static final int cinza_c=0x7f040004;
-        public static final int cinza_d=0x7f040005;
-        public static final int cinza_e=0x7f040006;
-        public static final int fundo=0x7f040000;
-        public static final int laranja=0x7f040007;
-        public static final int preto=0x7f040008;
-        public static final int transparente=0x7f040009;
-        public static final int verde=0x7f04000a;
-        public static final int vermelho=0x7f04000b;
+        public static final int background=0x7f040000;
+        public static final int black=0x7f040008;
+        public static final int blue=0x7f040002;
+        public static final int gray_c=0x7f040004;
+        public static final int gray_d=0x7f040005;
+        public static final int gray_e=0x7f040006;
+        public static final int green=0x7f04000a;
+        public static final int orange=0x7f040007;
+        public static final int red=0x7f04000b;
+        public static final int translucent=0x7f040009;
+        public static final int white=0x7f040003;
+        public static final int yellow=0x7f040001;
     }
     public static final class drawable {
         public static final int center=0x7f020000;

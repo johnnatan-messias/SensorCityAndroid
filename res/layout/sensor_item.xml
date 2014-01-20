@@ -29,7 +29,7 @@
             android:layout_width="1dp"
             android:layout_height="20dp"
             android:layout_marginRight="5dp"
-            android:background="@color/vermelho" >
+            android:background="@color/red" >
         </View>
 
         <TextView
@@ -45,7 +45,7 @@
             android:layout_width="1dp"
             android:layout_height="20dp"
             android:layout_marginRight="5dp"
-            android:background="@color/vermelho" >
+            android:background="@color/red" >
         </View>
 
         <TextView
@@ -61,7 +61,7 @@
             android:layout_width="1dp"
             android:layout_height="20dp"
             android:layout_marginRight="5dp"
-            android:background="@color/vermelho" >
+            android:background="@color/red" >
         </View>
 
         <TextView

@@ -13,7 +13,7 @@
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:cacheColorHint="@color/transparente" >
+        android:cacheColorHint="@color/translucent" >
     </ListView>
 
     <include layout="@layout/include_footer" >

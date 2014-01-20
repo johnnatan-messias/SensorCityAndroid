@@ -23,7 +23,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="@string/about"
-                android:textColor="@color/preto" >
+                android:textColor="@color/black" >
             </TextView>
         </LinearLayout>
     </ScrollView>
