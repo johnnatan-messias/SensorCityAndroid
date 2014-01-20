@@ -22,7 +22,6 @@ public class SensorsAdapter extends BaseAdapter {
 		this.sensores = sensores;
 		this.layoutInflater = (LayoutInflater) context
 				.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-
 	}
 
 	@Override

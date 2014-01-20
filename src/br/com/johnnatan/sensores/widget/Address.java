@@ -5,22 +5,16 @@ import java.io.Serializable;
 public class Address implements Serializable {
 
 	private static final long serialVersionUID = 6439126773316342646L;
+
+	private long id;
 	private String street;
 	private int number;
 	private String neighborhood;
 	private String city;
 	private String state;
 	private String country;
-
-	public Address(String street, int number, String neighborhood, String city,
-			String state, String country) {
-		this.street = street;
-		this.number = number;
-		this.neighborhood = neighborhood;
-		this.city = city;
-		this.state = state;
-		this.country = country;
-	}
+	private String zip;
+	private String ap;
 
 	public Address() {
 	}
@@ -75,6 +69,30 @@ public class Address implements Serializable {
 
 	public void setCountry(String country) {
 		this.country = country;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getZip() {
+		return zip;
+	}
+
+	public void setZip(String zip) {
+		this.zip = zip;
+	}
+
+	public String getAp() {
+		return ap;
+	}
+
+	public void setAp(String ap) {
+		this.ap = ap;
 	}
 
 }

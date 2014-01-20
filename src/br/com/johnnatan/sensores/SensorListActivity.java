@@ -42,24 +42,20 @@ public class SensorListActivity extends TransacaoActivity implements
 
 	@Override
 	public void executar() throws Exception {
-		// TODO Auto-generated method stub
 		this.sensores = WebService.getSensors();
 
 	}
 
 	@Override
 	public void atualizarView() {
-		// TODO Auto-generated method stub
 		if (sensores != null) {
 			listView.setAdapter(new SensorsAdapter(this, sensores));
 		}
-
 	}
 
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int posicao,
 			long id) {
-		// TODO Auto-generated method stub
 		SensoresItem sensor = (SensoresItem) parent.getAdapter().getItem(
 				posicao);
 		Intent intent = new Intent(this, AboutSensorsActivity.class);

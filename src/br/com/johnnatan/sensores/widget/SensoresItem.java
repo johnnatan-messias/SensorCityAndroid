@@ -1,11 +1,15 @@
 package br.com.johnnatan.sensores.widget;
 
 import java.io.Serializable;
+import java.util.Date;
 
 public class SensoresItem implements Serializable {
 
 	private static final long serialVersionUID = -3487852425658420880L;
 	public static final String KEY = "SensoresItem";
+	protected long id;
+	private float atmPressure;
+	private float audio;
 	private float luminosity;
 	private float temperature;
 	private float humidity;
@@ -13,17 +17,8 @@ public class SensoresItem implements Serializable {
 	private float longitude;
 	private Address address;
 	private String information;
-
-	public SensoresItem(float luminosity, float temperature, float humidity,
-			float latitude, float longitude, Address address, String information) {
-		this.luminosity = luminosity;
-		this.temperature = temperature;
-		this.humidity = humidity;
-		this.latitude = latitude;
-		this.longitude = longitude;
-		this.address = address;
-		this.information = information;
-	}
+	protected String name;
+	protected Date timestamp;
 
 	public SensoresItem() {
 	}
@@ -102,6 +97,46 @@ public class SensoresItem implements Serializable {
 
 	public void setInformation(String information) {
 		this.information = information;
+	}
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public Date getTimestamp() {
+		return timestamp;
+	}
+
+	public void setTimestamp(Date timestamp) {
+		this.timestamp = timestamp;
+	}
+
+	public float getAtmPressure() {
+		return atmPressure;
+	}
+
+	public void setAtmPressure(float atmPressure) {
+		this.atmPressure = atmPressure;
+	}
+
+	public float getAudio() {
+		return audio;
+	}
+
+	public void setAudio(float audio) {
+		this.audio = audio;
 	}
 
 }

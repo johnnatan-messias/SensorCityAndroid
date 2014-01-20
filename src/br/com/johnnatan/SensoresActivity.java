@@ -33,7 +33,6 @@ public class SensoresActivity extends Activity implements ServiceConnection {
 		Log.i(CATEGORIA, "Service Started - bindService");
 		bindService(new Intent(this, LuminiServiceConexao.class), conexao,
 				Context.BIND_AUTO_CREATE);
-
 	}
 
 	public void onClickMapSensors(View v) {
