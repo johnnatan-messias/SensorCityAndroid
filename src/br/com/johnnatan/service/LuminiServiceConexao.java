@@ -23,13 +23,11 @@ public class LuminiServiceConexao extends LuminiService implements
 
 	@Override
 	public IBinder onBind(Intent intent) {
-		// TODO Put your code here
 		return conexao;
 	}
 
 	@Override
 	public List<SensoresItem> getSensores() {
-		// TODO Auto-generated method stub
 		return sensores;
 	}
 }

@@ -8,6 +8,7 @@ public class AboutActivity extends Activity {
 	/**
 	 * @see android.app.Activity#onCreate(Bundle)
 	 */
+	
 	private TextView titleHeader;
 
 	@Override

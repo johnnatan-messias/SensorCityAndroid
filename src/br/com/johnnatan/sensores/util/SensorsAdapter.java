@@ -33,30 +33,27 @@ public class SensorsAdapter extends BaseAdapter {
 
 	@Override
 	public Object getItem(int position) {
-		// TODO Auto-generated method stub
 		return sensores != null ? sensores.get(position) : null;
 	}
 
 	@Override
 	public long getItemId(int position) {
-		// TODO Auto-generated method stub
 		return position;
 	}
 
 	@Override
 	public View getView(int position, View view, ViewGroup parent) {
-		// TODO Auto-generated method stub
 		ViewHolder holder = null;
 		if (view == null) {
 			holder = new ViewHolder();
 			int layout = R.layout.sensor_item;
 			view = layoutInflater.inflate(layout, null);
 			view.setTag(holder);
-			holder.luminosidade = (TextView) view
+			holder.luminosity = (TextView) view
 					.findViewById(R.id.luminosidade);
-			holder.temperatura = (TextView) view.findViewById(R.id.temperatura);
-			holder.umidade = (TextView) view.findViewById(R.id.umidade);
-			holder.cidade = (TextView) view.findViewById(R.id.city);
+			holder.temperature = (TextView) view.findViewById(R.id.temperatura);
+			holder.humidity = (TextView) view.findViewById(R.id.umidade);
+			holder.city = (TextView) view.findViewById(R.id.city);
 
 			/* Case eu inclua mais, modificar aqui */
 
@@ -64,19 +61,19 @@ public class SensorsAdapter extends BaseAdapter {
 			holder = (ViewHolder) view.getTag();
 		}
 		SensoresItem sensor = sensores.get(position);
-		holder.luminosidade.setText(String.valueOf(sensor.getLuminosity()));
-		holder.temperatura.setText(String.valueOf(sensor.getTemperature()));
-		holder.umidade.setText(String.valueOf(sensor.getHumidity()));
-		holder.cidade.setText(sensor.getAddress().getCity());
+		holder.luminosity.setText(String.valueOf(sensor.getLuminosity()));
+		holder.temperature.setText(String.valueOf(sensor.getTemperature()));
+		holder.humidity.setText(String.valueOf(sensor.getHumidity()));
+		holder.city.setText(sensor.getAddress().getCity());
 
 		return view;
 	}
 
 	static class ViewHolder {
-		TextView luminosidade;
-		TextView temperatura;
-		TextView umidade;
-		TextView cidade;
+		TextView luminosity;
+		TextView temperature;
+		TextView humidity;
+		TextView city;
 	}
 
 }

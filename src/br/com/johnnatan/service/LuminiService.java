@@ -14,14 +14,13 @@ public class LuminiService extends Service implements Runnable {
 	/**
 	 * @see android.app.Service#onBind(Intent)
 	 */
-	private static String CATEGORIA = "LuminiService";
+	private static String CATEGORIA = "SensorCity";
 	private boolean ativo;
 	protected List<SensoresItem> sensores;
-	private long time = 10000;
+	private long time = 100000;
 
 	@Override
 	public void onCreate() {
-		// TODO Auto-generated method stub
 		super.onCreate();
 		ativo = true;
 
@@ -31,7 +30,6 @@ public class LuminiService extends Service implements Runnable {
 
 	@Override
 	public void onStart(Intent intent, int startId) {
-		// TODO Auto-generated method stub
 		super.onStart(intent, startId);
 		Log.i(CATEGORIA, "onStart");
 
@@ -39,27 +37,23 @@ public class LuminiService extends Service implements Runnable {
 
 	@Override
 	public IBinder onBind(Intent intent) {
-		// TODO Put your code here
 		return null;
 	}
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
 		while (ativo) {
 			try {
 				sensores = WebService.getSensors();
 
-				Log.i(CATEGORIA, "Serviço OK");
+				Log.i(CATEGORIA, "Service OK");
 
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				Log.e(CATEGORIA, e.getMessage(), e);
 			}
 			try {
 				Thread.sleep(time);
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
 				Log.e(CATEGORIA, e.getMessage(), e);
 			}
 
@@ -68,7 +62,6 @@ public class LuminiService extends Service implements Runnable {
 
 	@Override
 	public void onDestroy() {
-		// TODO Auto-generated method stub
 		super.onDestroy();
 		ativo = false;
 		Log.i(CATEGORIA, "onDestroy");
