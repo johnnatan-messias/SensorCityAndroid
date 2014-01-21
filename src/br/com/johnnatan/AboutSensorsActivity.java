@@ -1,8 +1,11 @@
 package br.com.johnnatan;
 
+import java.util.Date;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
+import br.com.johnnatan.sensores.widget.Address;
 import br.com.johnnatan.sensores.widget.SensoresItem;
 
 public class AboutSensorsActivity extends Activity {
@@ -12,7 +15,9 @@ public class AboutSensorsActivity extends Activity {
 	private TextView titleHeader;
 	private SensoresItem sensor;
 	private TextView temperature, luminosity, humidity, street, num,
-			neighborhood, city, state, country, info;
+			neighborhood, city, state, country;
+	private TextView atmPressure, audio, latitude, longitude, nameSensor,
+			timestamp, zip, ap;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +39,15 @@ public class AboutSensorsActivity extends Activity {
 		city = (TextView) findViewById(R.id.city);
 		state = (TextView) findViewById(R.id.state);
 		country = (TextView) findViewById(R.id.country);
-		info = (TextView) findViewById(R.id.information);
+
+		atmPressure = (TextView) findViewById(R.id.atmpressure);
+		audio = (TextView) findViewById(R.id.audio);
+		latitude = (TextView) findViewById(R.id.latitude);
+		longitude = (TextView) findViewById(R.id.longitude);
+		nameSensor = (TextView) findViewById(R.id.namesensor);
+		timestamp = (TextView) findViewById(R.id.timestamp);
+		zip = (TextView) findViewById(R.id.zip);
+		ap = (TextView) findViewById(R.id.ap);
 
 		temperature.setText(String.valueOf(sensor.getTemperature()));
 		luminosity.setText(String.valueOf(sensor.getLuminosity()));
@@ -45,6 +58,13 @@ public class AboutSensorsActivity extends Activity {
 		city.setText(sensor.getAddress().getCity());
 		state.setText(sensor.getAddress().getNeighborhood());
 		country.setText(sensor.getAddress().getCountry());
-		info.setText(sensor.getInformation());
+		atmPressure.setText(String.valueOf(sensor.getAtmPressure()));
+		audio.setText(String.valueOf(sensor.getAudio()));
+		latitude.setText(String.valueOf(sensor.getLatitude()));
+		longitude.setText(String.valueOf(sensor.getLongitude()));
+		nameSensor.setText(sensor.getName());
+		timestamp.setText(sensor.getTimestamp().toString());
+		zip.setText(sensor.getAddress().getZip());
+		ap.setText(sensor.getAddress().getAp());
 	}
 }

@@ -1,12 +1,19 @@
 package br.com.johnnatan.sensores.widget;
 
 import java.io.Serializable;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import android.text.format.DateFormat;
+import android.util.Log;
 
 public class SensoresItem implements Serializable {
 
 	private static final long serialVersionUID = -3487852425658420880L;
 	public static final String KEY = "SensoresItem";
+	private static String TAG = "AndroidUtils";
+
 	protected long id;
 	private float atmPressure;
 	private float audio;
@@ -16,9 +23,8 @@ public class SensoresItem implements Serializable {
 	private float latitude;
 	private float longitude;
 	private Address address;
-	private String information;
-	protected String name;
-	protected Date timestamp;
+	private String name;
+	private String timestamp;
 
 	public SensoresItem() {
 	}
@@ -91,20 +97,16 @@ public class SensoresItem implements Serializable {
 		this.address = address;
 	}
 
-	public String getInformation() {
-		return this.information;
-	}
-
-	public void setInformation(String information) {
-		this.information = information;
-	}
-
 	public long getId() {
 		return id;
 	}
 
 	public void setId(long id) {
 		this.id = id;
+	}
+
+	public void setId(String id) {
+		this.id = Long.valueOf(id);
 	}
 
 	public String getName() {
@@ -115,12 +117,15 @@ public class SensoresItem implements Serializable {
 		this.name = name;
 	}
 
-	public Date getTimestamp() {
+	public String getTimestamp() {
 		return timestamp;
 	}
 
-	public void setTimestamp(Date timestamp) {
-		this.timestamp = timestamp;
+	public void setTimestamp(String timestamp) {
+
+		this.timestamp = (String) android.text.format.DateFormat.format(
+				"dd-MM-yyyy HH:mm:ss", new java.util.Date());
+
 	}
 
 	public float getAtmPressure() {
@@ -131,12 +136,20 @@ public class SensoresItem implements Serializable {
 		this.atmPressure = atmPressure;
 	}
 
+	public void setAtmPressure(String atmPressure) {
+		this.atmPressure = Float.valueOf(atmPressure);
+	}
+
 	public float getAudio() {
 		return audio;
 	}
 
 	public void setAudio(float audio) {
 		this.audio = audio;
+	}
+
+	public void setAudio(String audio) {
+		this.audio = Float.valueOf(audio);
 	}
 
 }

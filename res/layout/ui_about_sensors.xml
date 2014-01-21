@@ -18,7 +18,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="2dp"
-            android:text="@string/sensors" >
+            android:text="@string/namesensor" >
+        </TextView>
+
+        <TextView
+            android:id="@+id/namesensor"
+            style="@style/texto14Negrito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
         </TextView>
 
         <LinearLayout
@@ -80,6 +87,90 @@
 
             <TextView
                 android:id="@+id/humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/texto12Negrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:text="@string/atmpressure" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/atmpressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/red" >
+            </View>
+
+            <TextView
+                style="@style/texto12Negrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:text="@string/audio" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/audio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </TextView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/texto12Negrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:text="@string/latitude" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/latitude"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+            </TextView>
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@color/red" >
+            </View>
+
+            <TextView
+                style="@style/texto12Negrito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="2dp"
+                android:text="@string/longitude" >
+            </TextView>
+
+            <TextView
+                android:id="@+id/longitude"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" >
             </TextView>
@@ -153,6 +244,28 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginRight="2dp"
+                    android:text="@string/ap" >
+                </TextView>
+
+                <TextView
+                    android:id="@+id/ap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+                </TextView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@color/gray_c" >
+                </View>
+
+                <TextView
+                    style="@style/texto12Negrito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="2dp"
                     android:text="@string/neighborhood" >
                 </TextView>
 
@@ -200,6 +313,28 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="2dp"
+                        android:text="@string/zip" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/zip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    </TextView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="20dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/gray_c" >
+                    </View>
+
+                    <TextView
+                        style="@style/texto12Negrito"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
                         android:text="@string/state" >
                     </TextView>
 
@@ -229,9 +364,30 @@
                         android:layout_height="wrap_content" >
                     </TextView>
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/texto12Negrito"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="2dp"
+                        android:text="@string/timestamp" >
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/timestamp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" >
+                    </TextView>
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
 
+        <!--
         <TextView
             style="@style/texto14Negrito"
             android:layout_width="wrap_content"
@@ -251,7 +407,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" >
             </TextView>
-        </ScrollView>
+        </ScrollView> -->
     </LinearLayout>
 
     <include layout="@layout/include_footer" >

@@ -57,22 +57,29 @@ public final class R {
         public static final int thermometer_snowflake=0x7f02001d;
     }
     public static final class id {
+        public static final int ap=0x7f08000c;
+        public static final int atmpressure=0x7f080006;
+        public static final int audio=0x7f080007;
         public static final int city=0x7f080004;
-        public static final int country=0x7f080009;
+        public static final int country=0x7f080010;
         public static final int humidity=0x7f080003;
-        public static final int information=0x7f08000a;
+        public static final int latitude=0x7f080008;
+        public static final int longitude=0x7f080009;
         public static final int luminosity=0x7f080002;
-        public static final int main_menu_about=0x7f08000d;
-        public static final int main_menu_exit=0x7f08000e;
-        public static final int map_view=0x7f08000b;
-        public static final int neighborhood=0x7f080007;
-        public static final int number=0x7f080006;
-        public static final int place_menu_map=0x7f08000f;
-        public static final int sensor_listview=0x7f08000c;
-        public static final int state=0x7f080008;
-        public static final int street=0x7f080005;
+        public static final int main_menu_about=0x7f080014;
+        public static final int main_menu_exit=0x7f080015;
+        public static final int map_view=0x7f080012;
+        public static final int namesensor=0x7f080005;
+        public static final int neighborhood=0x7f08000d;
+        public static final int number=0x7f08000b;
+        public static final int place_menu_map=0x7f080016;
+        public static final int sensor_listview=0x7f080013;
+        public static final int state=0x7f08000f;
+        public static final int street=0x7f08000a;
         public static final int tHeader=0x7f080000;
         public static final int temperature=0x7f080001;
+        public static final int timestamp=0x7f080011;
+        public static final int zip=0x7f08000e;
     }
     public static final class layout {
         public static final int include_footer=0x7f030000;
@@ -91,7 +98,10 @@ public final class R {
     public static final class string {
         public static final int about=0x7f060009;
         public static final int address=0x7f060014;
+        public static final int ap=0x7f060022;
         public static final int app_name=0x7f060001;
+        public static final int atmpressure=0x7f06001d;
+        public static final int audio=0x7f06001e;
         public static final int button_map=0x7f06000d;
         public static final int button_sensors=0x7f06000c;
         public static final int city=0x7f060018;
@@ -102,13 +112,17 @@ public final class R {
         public static final int hello=0x7f060000;
         public static final int humid=0x7f06000e;
         public static final int informations=0x7f06001b;
+        public static final int latitude=0x7f060024;
         public static final int light=0x7f060002;
+        public static final int longitude=0x7f060023;
+        public static final int namesensor=0x7f06001f;
         public static final int neighborhood=0x7f060019;
         public static final int number=0x7f060016;
         public static final int sensors=0x7f060013;
         public static final int state=0x7f060017;
         public static final int street=0x7f060015;
         public static final int temperature=0x7f060003;
+        public static final int timestamp=0x7f060020;
         public static final int title=0x7f060008;
         public static final int title_about=0x7f06000b;
         public static final int title_about_sensors=0x7f060012;
@@ -118,6 +132,7 @@ public final class R {
         public static final int ui_exit=0x7f060006;
         public static final int ui_place_change_map=0x7f06001c;
         public static final int wait=0x7f06000f;
+        public static final int zip=0x7f060021;
     }
     public static final class style {
         /**  Tema Padrão 

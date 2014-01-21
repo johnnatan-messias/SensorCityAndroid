@@ -79,6 +79,10 @@ public class Address implements Serializable {
 		this.id = id;
 	}
 
+	public void setId(String id) {
+		this.id = Long.valueOf(id);
+	}
+
 	public String getZip() {
 		return zip;
 	}

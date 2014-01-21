@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <resources>
+
     <string name="hello">Hello World</string>
     <string name="app_name">SensorCity</string>
     <string name="light">Luminosity:</string>
@@ -29,4 +30,13 @@
     <string name="country">Country:</string>
     <string name="informations">Information: </string>
     <string name="ui_place_change_map">Change Map</string>
+    <string name="atmpressure">Atm Pressure:</string>
+    <string name="audio">Audio:</string>
+    <string name="namesensor">Sensor Name:</string>
+    <string name="timestamp">Last Updated at:</string>
+    <string name="zip">ZIP:</string>
+    <string name="ap">AP:</string>
+    <string name="longitude">Long:</string>
+    <string name="latitude">Lat:</string>
+
 </resources>
