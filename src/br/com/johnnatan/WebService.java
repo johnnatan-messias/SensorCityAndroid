@@ -14,7 +14,7 @@ import br.com.johnnatan.sensores.widget.SensoresItem;
 
 public class WebService {
 
-	private static String URL = "http://192.168.1.26:8080/EJBSensorCity/rest/";
+	private static String URL = "http://200.239.138.155:44583/EJBSensorCity/rest/";
 	private static final String charset = "UTF-8";
 
 	public static List<SensoresItem> getSensors() throws IOException {

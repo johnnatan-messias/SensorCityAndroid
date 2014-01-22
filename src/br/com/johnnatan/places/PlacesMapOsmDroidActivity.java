@@ -2,7 +2,6 @@ package br.com.johnnatan.places;
 
 import java.util.ArrayList;
 
-import org.osmdroid.DefaultResourceProxyImpl;
 import org.osmdroid.ResourceProxy;
 import org.osmdroid.tileprovider.tilesource.TileSourceFactory;
 import org.osmdroid.tileprovider.tilesource.bing.BingMapTileSource;
@@ -22,6 +21,7 @@ import br.com.johnnatan.R;
 import br.com.johnnatan.places.util.MapView;
 import br.com.johnnatan.places.util.MyPoint;
 import br.com.johnnatan.places.util.ResourceProxyImpl;
+import br.com.johnnatan.service.widget.LuminiServiceInterface;
 
 public class PlacesMapOsmDroidActivity extends Activity {
 	/**
@@ -36,6 +36,7 @@ public class PlacesMapOsmDroidActivity extends Activity {
 	private ItemizedOverlay<OverlayItem> itemizedOverlay;
 	private ResourceProxy resourceProxy;
 	private boolean isAerial = false;
+	private LuminiServiceInterface sensores;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +44,7 @@ public class PlacesMapOsmDroidActivity extends Activity {
 		setContentView(R.layout.ui_main_map_osmdroid);
 		resourceProxy = new ResourceProxyImpl(getApplicationContext());
 		bms = new BingMapTileSource(null);
-		// bms.setStyle(BingMapTileSource.IMAGERYSET_AERIAL);
+		
 		if (BingMapTileSource.getBingKey().length() == 0) {
 			BingMapTileSource.retrieveBingKey(getApplicationContext());
 		}
@@ -72,13 +73,12 @@ public class PlacesMapOsmDroidActivity extends Activity {
 		myLocationOverlay.enableMyLocation();
 
 		ArrayList<OverlayItem> items = new ArrayList<OverlayItem>();
-		items.add(new OverlayItem("Johnnatan", "Está na UFOP", point));
+		items.add(new OverlayItem("Johnnatan", "Is at UFOP", point));
 
 		itemizedOverlay = new ItemizedIconOverlay<OverlayItem>(items,
 				new ItemizedIconOverlay.OnItemGestureListener<OverlayItem>() {
 					@Override
 					public boolean onItemLongPress(int index, OverlayItem item) {
-						// TODO Auto-generated method stub
 						Toast.makeText(
 								PlacesMapOsmDroidActivity.this,
 								"onItemLongPress Title: " + item.mTitle + " "
@@ -90,7 +90,6 @@ public class PlacesMapOsmDroidActivity extends Activity {
 
 					@Override
 					public boolean onItemSingleTapUp(int index, OverlayItem item) {
-						// TODO Auto-generated method stub
 						Toast.makeText(
 								PlacesMapOsmDroidActivity.this,
 								"ItemSingleTapUp Title: " + item.mTitle + " "
@@ -108,7 +107,6 @@ public class PlacesMapOsmDroidActivity extends Activity {
 
 	@Override
 	protected void onDestroy() {
-		// TODO Auto-generated method stub
 		super.onDestroy();
 		myLocationOverlay.disableCompass();
 		myLocationOverlay.disableMyLocation();
@@ -116,7 +114,6 @@ public class PlacesMapOsmDroidActivity extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// TODO Auto-generated method stub
 		MenuInflater inflater = getMenuInflater();
 		inflater.inflate(R.menu.ui_place_map, menu);
 		return super.onCreateOptionsMenu(menu);
@@ -124,27 +121,21 @@ public class PlacesMapOsmDroidActivity extends Activity {
 
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// TODO Auto-generated method stub
-
 		switch (item.getItemId()) {
 
 		case R.id.place_menu_map:
 			if (isAerial) {
 				bms.setStyle(BingMapTileSource.IMAGERYSET_ROAD);
 				isAerial = false;
-				Toast.makeText(this, "Mapa normal", Toast.LENGTH_SHORT).show();
+				Toast.makeText(this, "Normal Map", Toast.LENGTH_SHORT).show();
 			} else {
 				bms.setStyle(BingMapTileSource.IMAGERYSET_AERIAL);
 				isAerial = true;
-				Toast.makeText(this, "Mapa Satélite", Toast.LENGTH_SHORT)
+				Toast.makeText(this, "Satellite Map", Toast.LENGTH_SHORT)
 						.show();
 			}
-
 			break;
-
 		}
 		return super.onOptionsItemSelected(item);
-
 	}
-
 }

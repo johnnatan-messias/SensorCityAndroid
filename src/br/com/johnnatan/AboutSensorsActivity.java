@@ -1,11 +1,8 @@
 package br.com.johnnatan;
 
-import java.util.Date;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.widget.TextView;
-import br.com.johnnatan.sensores.widget.Address;
 import br.com.johnnatan.sensores.widget.SensoresItem;
 
 public class AboutSensorsActivity extends Activity {

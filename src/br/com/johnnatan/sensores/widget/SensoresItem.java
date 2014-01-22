@@ -1,12 +1,12 @@
 package br.com.johnnatan.sensores.widget;
 
 import java.io.Serializable;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import android.text.format.DateFormat;
-import android.util.Log;
+import util.AndroidUtils;
 
 public class SensoresItem implements Serializable {
 
@@ -122,10 +122,7 @@ public class SensoresItem implements Serializable {
 	}
 
 	public void setTimestamp(String timestamp) {
-
-		this.timestamp = (String) android.text.format.DateFormat.format(
-				"dd-MM-yyyy HH:mm:ss", new java.util.Date());
-
+		this.timestamp = AndroidUtils.parser(timestamp);
 	}
 
 	public float getAtmPressure() {
