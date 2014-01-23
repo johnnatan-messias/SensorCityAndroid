@@ -46,17 +46,17 @@ public class AboutSensorsActivity extends Activity {
 		zip = (TextView) findViewById(R.id.zip);
 		ap = (TextView) findViewById(R.id.ap);
 
-		temperature.setText(String.valueOf(sensor.getTemperature()));
-		luminosity.setText(String.valueOf(sensor.getLuminosity()));
-		humidity.setText(String.valueOf(sensor.getHumidity()));
+		temperature.setText(String.valueOf(sensor.getTemperature()) + " °C");
+		luminosity.setText(String.valueOf(sensor.getLuminosity()) + " %");
+		humidity.setText(String.valueOf(sensor.getHumidity()) + " %");
 		street.setText(sensor.getAddress().getStreet());
 		num.setText(String.valueOf(sensor.getAddress().getNumber()));
 		neighborhood.setText(sensor.getAddress().getState());
 		city.setText(sensor.getAddress().getCity());
 		state.setText(sensor.getAddress().getNeighborhood());
 		country.setText(sensor.getAddress().getCountry());
-		atmPressure.setText(String.valueOf(sensor.getAtmPressure()));
-		audio.setText(String.valueOf(sensor.getAudio()));
+		atmPressure.setText(String.valueOf(sensor.getAtmPressure()) + " mb");
+		audio.setText(String.valueOf(sensor.getAudio()) + " db");
 		latitude.setText(String.valueOf(sensor.getLatitude()));
 		longitude.setText(String.valueOf(sensor.getLongitude()));
 		nameSensor.setText(sensor.getName());
