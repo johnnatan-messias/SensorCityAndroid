@@ -18,7 +18,7 @@
         android:label="@string/app_name"
         android:theme="@style/tema" ><meta-data
             android:name="BING_KEY"
-            android:value="AhxXDmKU1zs3BuemSfckKFHQ-Oa-OQQN-3WRuNyHoSxalXD7NyhfMBvdwB1V9sht" />
+            android:value="Put Your Bing Key Here" />
 
         <activity
             android:name=".SensoresActivity"
